@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style>
+        div{
+            background-color: gray;
+            border: 1px solid black;
+            min-height: 100px;
+        }
+        #rowConteudo{
+            height: 400px;
+        }
+        .flex-row{ /*Personalizando o flex-row do bootstrap*/
+            flex: 1 0 auto;/*quanto cresce = 100%, quanto encolhe = 0, largura padrão= auto*/
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row justify-content-between"><!-- justifica o conteudo colocando um espaço entre as divs-->
+            <div class="col-3"> Coluna 1</div>
+            <div class="col-6"> Coluna 2</div>
+        </div>
+
+        <div class="row" id="rowConteudo">
+            <div class="col-9 d-flex">
+                <!-- d-flex = display:flex
+                    para alinhar verticalmente = flex-column
+                    para alinhar horizontalmente = flex-row
+                -->
+                
+                <div class="d-flex flex-column w-100"><!-- w-100 = width:100% -->
+                    <div>Primeiro</div>
+                    <div class="flex-row">Flex</div>
+                    <div>Terceiro</div>
+                </div>
+            </div>
+            <div class="col-3 d-flex">
+                <div class="d-flex flex-column w-100">
+                    <div>Primeirão</div>
+                    <div class="flex-row">Segundão</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">Rodape</div>
+    </div>
+</body>
+</html>

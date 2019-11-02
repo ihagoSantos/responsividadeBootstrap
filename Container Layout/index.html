@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #azul{
+            background-color: blue;
+            height: 120px;
+        }
+        #vermelho{
+            background-color: red;
+            height: 120px;
+        }
+        #preto{
+            background-color: black;
+            height: 400px;
+        }
+        #amarelo{
+            background-color: yellow;
+            height: 400px;
+        }
+        #verde{
+            background-color: green;
+            height: 116px;
+        }
+
+        @media screen and (max-width: 576px) { /* Quando a largura máxima for 576px (sm) */
+            #azul{
+                height: 60px;
+            }
+            #vermelho{
+                height: 45px;
+            }
+            #preto{
+                height: 420px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- BreakPoints Bootstrap
+
+        xs: Extra Small < 576px (portrait Mobile - celular vertical)
+        sm: Small >= 576px (landscape mobile - celular horizontal)
+        md: Medium >= 768px (portrait tablets. navbar collapse)
+        lg: Large >= 992px (landscape tablets)
+        xl: Extra Large >= 1200px (laptops, desktops, tvs)
+    
+        Os dispositivos md, lg e xl obedecem ao tamanho sm (sm >= 576px)
+    -->
+
+    <!-- 
+        O ideal é ter um container contendo todos os itens
+
+        container -> oculpa quase toda a largura da tela
+        container-fluid -> oculpa toda a largura da tela
+     -->
+     <!-- O layout da tela no Bootstrap é dividido em 12 colunas -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- quando a resolução da tela for sm oculpa 3 colunas, quando a resolução for xs oculpa 12 -->
+            <div id="azul" class="col-sm-3 col-xs-12"></div> <!-- Oculpa 3 colunas no tamanho sm para cima-->
+            <div id="vermelho" class="col-sm-9 col-xs-12"></div> <!-- Oculpa 9 colunas no tamanho sm para cima-->
+        </div>
+
+        <div class="row">    
+            <div id="preto" class="col-sm-10 col-xs-12"></div>
+            <div id="amarelo" class="col-sm-2 d-none d-sm-block"></div><!-- desabilita a div amarela (d-none = display:none)
+            Mas exibe quando a resolução for de sm pra cima (d-sm-block)-->
+        </div>
+
+        <div class="row">
+            <div id="verde" class="col-12"></div><!-- A div tem 12 colunas em qualquer resoluçao-->
+        </div>
+
+    </div>
+
+</body>
+</html>
